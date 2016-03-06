@@ -33,6 +33,7 @@ class GoIPUpdater(object):
             self.updateIPFile()
 
     def updateIPFile(self):
+        open("./current_ip.txt", "w").close()
         f = open("./current_ip.txt", "r+")
         f.write(self.getPublicIP())
         f.close()
