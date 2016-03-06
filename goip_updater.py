@@ -51,9 +51,7 @@ class GoIPUpdater(object):
         ipFileExists = os.path.isfile("./current_ip.txt")
         if ipFileExists:
             f = open("./current_ip.txt")
-            lastIP = f.read()
-            f.close()
-            return lastIP
+            return f.read()
 
     def createIPFile(self):
         ipFileExists = os.path.isfile("./current_ip.txt")
